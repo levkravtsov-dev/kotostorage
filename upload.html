@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta
+			name="description"
+			content="Upload your cat's photo and view others in the gallery. KotoStorage is a storage for cat lovers."
+		/>
+
+		<!-- favicon -->
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="manifest" href="/site.webmanifest" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+
+		<!-- styles -->
+		<link rel="stylesheet" href="css/reset.css" />
+		<link rel="stylesheet" href="css/styles.css" />
+		<link rel="stylesheet" href="css/media.css" />
+
+		<!-- title -->
+		<title>KotoStorage Upload | Upload a photo</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="container">
+				<div class="header__inner">
+					<div class="header__logo">
+						<a href="index.html" aria-label="KotoStorage home page"
+							>KotoStorage</a
+						>
+					</div>
+					<!-- navigation desktop -->
+					<nav class="header__nav">
+						<ul class="nav__list">
+							<li class="nav__list-item">
+								<a href="index.html">About</a>
+							</li>
+							<li class="nav__list-item active">
+								<a href="upload.html">Upload</a>
+							</li>
+							<li class="nav__list-item"><a href="gallery.html">Gallery</a></li>
+						</ul>
+					</nav>
+					<div class="header__btn">
+						<a
+							role="button"
+							href="https://github.com/levkravtsov-dev"
+							target="_blank"
+							rel="noopener noreferrer"
+							aria-label="Visit GitHub profile"
+							>GitHub</a
+						>
+					</div>
+					<div
+						role="button"
+						class="burger__btn"
+						id="burger"
+						aria-expanded="false"
+						aria-controls="burger_active"
+					>
+						<svg
+							width="29"
+							height="20"
+							viewBox="0 0 29 20"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<rect width="29" height="4" fill="black" />
+							<rect y="8" width="29" height="4" fill="black" />
+							<rect y="16" width="29" height="4" fill="black" />
+						</svg>
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- navigation mobile -->
+		<nav class="burger-active" id="burger_active">
+			<div class="burger-active__inner">
+				<div class="burger-active__top">
+					<div class="top__inner">
+						<div class="burger-active__logo">
+							<a href="index.html">KotoStorage</a>
+						</div>
+						<div class="nav-mobile__close-btn" id="cross" role="button">
+							<svg
+								width="28"
+								height="28"
+								viewBox="0 0 28 28"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<line
+									y1="-2"
+									x2="33.7633"
+									y2="-2"
+									transform="matrix(0.710831 0.703363 -0.787481 0.616338 0 3.25208)"
+									stroke="black"
+									stroke-width="4"
+								/>
+								<line
+									y1="-2"
+									x2="33.6507"
+									y2="-2"
+									transform="matrix(0.692055 -0.721844 -0.802886 -0.596133 0.406738 25.2905)"
+									stroke="black"
+									stroke-width="4"
+								/>
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div class="burger-active__nav">
+					<ul class="burger-active__list" aria-label="Main mobile navigation">
+						<li class="burger-active__list-item">
+							<a href="index.html">About</a>
+						</li>
+						<li class="burger-active__list-item">
+							<a href="upload.html">Upload</a>
+						</li>
+						<li class="burger-active__list-item">
+							<a href="gallery.html">Gallery</a>
+						</li>
+					</ul>
+				</div>
+				<div class="burger-active__info">
+					<h2 class="burger-active__title">Follow us in the media</h2>
+					<p class="burger-active__text">
+						Hear about exclusive news and changes in the cats world
+					</p>
+					<div class="burger-active__socials">
+						<ul
+							class="burger-active__socials-list"
+							aria-label="Social section of mobile navigation"
+						>
+							<li class="burger-active__socials-list__item">
+								<a
+									href="#"
+									aria-label="Visit our Instagram"
+									aria-disabled="true"
+									onclick="event.preventDefault();"
+									>Instagram</a
+								>
+							</li>
+							<li class="burger-active__socials-list__item">
+								<a
+									href="#"
+									aria-label="Visit our Telegram"
+									aria-disabled="true"
+									onclick="event.preventDefault();"
+									>Telegram</a
+								>
+							</li>
+							<li class="burger-active__socials-list__item">
+								<a
+									href="https://github.com/levkravtsov-dev"
+									target="_blank"
+									rel="noopener noreferrer"
+									aria-label="Visit GitHub profile"
+									>GitHub</a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<main class="main">
+			<!-- upload form section -->
+			<section class="upload">
+				<div class="container">
+					<div class="upload__inner">
+						<div class="upload__head">
+							<h1 class="upload__head-title">Upload a photo</h1>
+							<p class="upload__head-subtitle">
+								Provide a link for your cat’s photo
+							</p>
+						</div>
+						<form class="upload__form" id="upload-form" method="GET">
+							<input
+								type="text"
+								name="cat-photo"
+								id="photo-url"
+								class="upload__form-input"
+								placeholder="Paste your link here"
+								required
+								aria-label="Photo link input"
+							/>
+							<button type="submit" class="upload__form-submit">
+								Upload to gallery
+							</button>
+						</form>
+					</div>
+				</div>
+			</section>
+
+			<!-- pictures section -->
+			<section class="pictures" aria-label="Pictures of beautiful cats">
+				<div class="container">
+					<div class="pictures__inner">
+						<h3 class="pictures__title">Uploaded recently:</h3>
+						<div class="pictures__grid">
+							<figure class="pictures__grid-item">
+								<a
+									href="#"
+									aria-disabled="true"
+									onclick="event.preventDefault();"
+								>
+									<img
+										src="images/grid-1.jpg"
+										alt="Orange cat on the grass"
+										loading="lazy"
+									/>
+									<span class="like-icon" aria-label="Like this photo"></span>
+								</a>
+							</figure>
+							<figure class="pictures__grid-item">
+								<a
+									href="#"
+									aria-disabled="true"
+									onclick="event.preventDefault();"
+								>
+									<img
+										src="images/grid-2.jpg"
+										alt="Red cat closed the eyes from the sun"
+										loading="lazy"
+									/>
+									<span class="like-icon" aria-label="Like this photo"></span>
+								</a>
+							</figure>
+							<figure class="pictures__grid-item">
+								<a
+									href="#"
+									aria-disabled="true"
+									onclick="event.preventDefault();"
+								>
+									<img
+										src="images/grid-3.jpg"
+										alt="White cat is lying on the sofa"
+										loading="lazy"
+									/>
+									<span class="like-icon" aria-label="Like this photo"></span>
+								</a>
+							</figure>
+							<figure class="pictures__grid-item">
+								<a
+									href="#"
+									aria-disabled="true"
+									onclick="event.preventDefault();"
+								>
+									<img
+										src="images/grid-4.jpg"
+										alt="Two cats are watching through the window"
+										loading="lazy"
+									/>
+									<span class="like-icon" aria-label="Like this photo"></span>
+								</a>
+							</figure>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- section preview -->
+			<section class="preview" id="preview">
+				<div class="container">
+					<div class="preview__inner">
+						<h3 class="preview__title">Preview of the photo:</h3>
+						<div id="preview__img"></div>
+					</div>
+				</div>
+			</section>
+		</main>
+
+		<!-- footer -->
+		<footer class="footer" id="footer" role="contentinfo">
+			<div class="container">
+				<div class="footer__inner">
+					<div class="footer__logo">
+						<div class="footer__logo-img">
+							<img
+								src="images/logo.png"
+								alt="logo - cat's paw"
+								loading="lazy"
+							/>
+						</div>
+						<p class="footer__logo-text">“Murr means love”</p>
+					</div>
+					<div class="footer__socials">
+						<h4 class="footer__socials-title">Follow us in the media</h4>
+						<p class="footer__socials-text">
+							Hear about exclusive news and changes in the cats world
+						</p>
+						<nav class="footer__socials-links" aria-label="Social media links">
+							<ul class="footer__socials-links__list">
+								<li class="socials-links__list-item">
+									<a
+										href="#"
+										aria-label="Visit our Instagram"
+										aria-disabled="true"
+										onclick="event.preventDefault();"
+										>Instagram</a
+									>
+								</li>
+								<li class="socials-links__list-item">
+									<a
+										href="#"
+										aria-label="Visit our Telegram"
+										aria-disabled="true"
+										onclick="event.preventDefault();"
+										>Telegram</a
+									>
+								</li>
+								<li class="socials-links__list-item">
+									<a
+										href="https://github.com/levkravtsov-dev"
+										target="_blank"
+										rel="noopener noreferrer"
+										aria-label="Visit GitHub profile"
+										>GitHub</a
+									>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script src="js/main.js" defer></script>
+	</body>
+</html>
