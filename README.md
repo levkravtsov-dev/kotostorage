@@ -39,5 +39,5 @@ project/
 └── README.md
 </pre>
 
-📬 Author
-Made with ❤️ by levkravtsov-dev
+## 📬 Author
+Made with ❤️ by [levkravtsov-dev](https://github.com/levkravtsov-dev)
