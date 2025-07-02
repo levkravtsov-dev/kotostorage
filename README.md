@@ -4,7 +4,7 @@ KotoStorage is a responsive web application for cat lovers. Users can upload the
 
 ## 🔗 Live Preview
 
-- [GitHub Pages](#) <!-- Add your actual link -->
+- [GitHub Pages](https://levkravtsov-dev.github.io/kotostorage/)
 - [Author GitHub](https://github.com/levkravtsov-dev)
 
 ## 💡 Features
