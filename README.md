@@ -1,29 +1,43 @@
-**KotoStorage** is a simple, responsive website where users can upload cat photos, preview them, like other cats, and browse a public gallery.
+# 🐾 KotoStorage
 
-Live on GitHub: https://github.com/levkravtsov-dev/kotostorage
+KotoStorage is a responsive web application for cat lovers. Users can upload their favorite cat photos via URL, view a beautiful community gallery, and interact with posts by leaving likes.
 
-It includes:
-- HTML5 semantic layout
-- Responsive design for mobile and desktop
-- Upload form with instant preview
-- Lazy loading images for performance
-- Like system using JS toggle
-- Accessibility and SEO optimizations
-- Clean, maintainable CSS and JS structure
+## 🔗 Live Preview
 
-📁 Project structure:
-```pre
-kotostorage/
+- [GitHub Pages](#) <!-- Add your actual link -->
+- [Author GitHub](https://github.com/levkravtsov-dev)
+
+## 💡 Features
+
+- Fully responsive layout
+- Smooth burger menu for mobile devices
+- Like system — click the heart icon to toggle "liked" state
+- Preview uploaded images before submission
+- High performance and accessibility scores
+- Lazy loading for gallery images
+
+## 💻 Tech Stack
+
+- HTML5
+- CSS3 (Flexbox, Media Queries)
+- JavaScript (Vanilla ES6)
+
+## 🗂️ Project Structure
+
+<pre>
+project/
 ├── css/
 │   ├── reset.css
 │   ├── styles.css
 │   └── media.css
+├── images/
 ├── js/
 │   └── main.js
-├── images/
 ├── index.html
 ├── upload.html
-└── gallery.html
-```
+├── gallery.html
+└── README.md
+</pre>
 
-No build tools or frameworks needed — just open .html files directly or run with Live Server.
+📬 Author
+Made with ❤️ by levkravtsov-dev
