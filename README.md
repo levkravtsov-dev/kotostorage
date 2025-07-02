@@ -51,3 +51,7 @@ Currently mastering **JavaScript** and **WordPress**, and building a portfolio t
 - 🌍 [LinkedIn](https://www.linkedin.com/in/lev-kravtsov-96a6812b4/)
 - 💼 [Upwork](https://www.upwork.com/freelancers/~0166f57eef68c0685b)
 - 🧑‍💻 [GitHub](https://github.com/levkravtsov-dev)
+
+## 📫 Feedback & Collaboration
+
+Feel free to connect with me for feedback, collaboration, or just to say hi!
